@@ -24,7 +24,7 @@ function loadNewModel(path) {
 function loadAnnotations(path) {
 	//Get path of annotations.txt of this model
 	pathTXT = getAnnoPath(path); 
-	//console.log(pathTXT);
+	console.log(pathTXT);
 	try {
 		fetch(pathTXT)
 			.then((response)=>{
@@ -63,7 +63,7 @@ function annotationsShowHide() {
 }
 
 function loadIndex() {
-	fetch("./fileindex")
+	fetch("./fileindex.txt")
 		.then((response)=>response.json())
 		.then((responseJson)=>{
 			index = responseJson;
