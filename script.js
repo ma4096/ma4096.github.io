@@ -182,7 +182,30 @@ loadNewModel((new URLSearchParams(window.location.search)).get("f"));
 
 //On model load -> timing for getting information from the model
 //var curDuration = 0;
-model.addEventListener("load", ()=>{
+model.addEventListener("load", addAnimations/*()=>{
+	var an = model.availableAnimations;
+	var pp = document.getElementsByClassName("animationsList")[0];
+	if (an.length === 0) {
+		pp.innerHTML = "No animations available for this model";
+	} else {
+		pp.innerHTML = "";
+		for (n in an) {
+			var b = document.createElement("button");
+			b.innerText = an[n];
+			//console.log(an[n]);
+			b.onclick = function(it) {
+				//console.log(it);
+				model.animationName = it.srcElement.innerText;
+				model.play();
+				isPaused = false;
+				document.getElementById("playPauseButton").innerHTML = "&#9208;";
+			}
+			pp.appendChild(b);
+		}
+	}*/
+});
+
+function addAnimations() {
 	var an = model.availableAnimations;
 	var pp = document.getElementsByClassName("animationsList")[0];
 	if (an.length === 0) {
@@ -203,7 +226,7 @@ model.addEventListener("load", ()=>{
 			pp.appendChild(b);
 		}
 	}
-});
+}
 
 //Handle play-pause
 var isPaused = true;
