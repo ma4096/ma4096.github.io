@@ -2,7 +2,7 @@ html, body {
   margin:0px;
   height:100%;
   font-family: Lucida Sans Typewriter;
-  background-color: #121212;
+  background-color: #fafafa;
 }
 
 sidebar {
@@ -145,6 +145,7 @@ model-viewer {
 	height: 50%;
 	text-align: center;
 	margin: auto;
+	overflow: auto;
 }
 #playbackRange {
 	width: 40%;
@@ -166,6 +167,6 @@ footer {
 	position: absolute;
 	bottom: 0px;
 }
-footer a:link {
+footer a {
 	color: grey;
 }

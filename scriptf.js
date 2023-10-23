@@ -20,3 +20,9 @@ function anoOpenClose() {
 	document.getElementById("anoButton").innerText = (anoIsOpen ? "Open Options" : "Close Options");
 	anoIsOpen = !anoIsOpen;
 }
+
+var isDarkMode = false;
+function switchColorMode() {
+	document.body.style.backgroundColor = isDarkMode ? "#fafafa" : "#121212";
+	isDarkMode = !isDarkMode;
+}
