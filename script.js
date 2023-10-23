@@ -182,7 +182,7 @@ loadNewModel((new URLSearchParams(window.location.search)).get("f"));
 
 //On model load -> timing for getting information from the model
 //var curDuration = 0;
-model.addEventListener("load", addAnimations/*()=>{
+model.addEventListener("load", addAnimations /*()=>{
 	var an = model.availableAnimations;
 	var pp = document.getElementsByClassName("animationsList")[0];
 	if (an.length === 0) {
@@ -202,8 +202,8 @@ model.addEventListener("load", addAnimations/*()=>{
 			}
 			pp.appendChild(b);
 		}
-	}*/
-});
+	}
+}*/);
 
 function addAnimations() {
 	var an = model.availableAnimations;
