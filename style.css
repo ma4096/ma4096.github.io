@@ -159,3 +159,13 @@ model-viewer {
   	margin-left: 90%;
   }
 }
+
+footer {
+	font-size: 0.7em;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+}
+footer a:link {
+	color: grey;
+}

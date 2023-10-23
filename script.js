@@ -25,7 +25,6 @@ function loadAnnotations(path) {
 	try {
 		fetch(pathTXT)
 			.then((response)=>{
-				//console.log(response);
 				return response.json();
 			}).then((annoJson)=>{
 				for (n in annoJson) {
