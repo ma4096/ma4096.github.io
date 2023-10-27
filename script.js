@@ -1,6 +1,7 @@
 var index;
 var menuPath = "";
 var model;
+var annotationsShown = true;
 //var currentIndex;
 
 function loadNewModel(path) {
@@ -30,6 +31,11 @@ function loadAnnotations(path) {
 				for (n in annoJson) {
 					model.innerHTML = model.innerHTML + annoJson[n];
 				}
+				//Check if annos should be displayed or not, similar to annotationsShowHide()
+				var annos = model.getElementsByClassName("hotspot");
+				for (var i=0; i<annos.length; i++) {
+					annos[i].style.visibility = annotationsShown ? "hidden" : "visible";
+				}
 				return annoJson;
 			});
 	} catch (e) {
@@ -49,11 +55,10 @@ function getAnnoPath(path) {
 }
 
 //Show or hide annotations as chosen in options
-var shown = true;
 function annotationsShowHide() {
 	var annos = model.getElementsByClassName("hotspot");
 	for (var i=0; i<annos.length; i++) {
-		annos[i].style.visibility = shown ? "hidden" : "visible";
+		annos[i].style.visibility = annotationsShown ? "hidden" : "visible";
 	}
 	shown = !shown;
 }
