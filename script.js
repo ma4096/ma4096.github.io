@@ -60,7 +60,7 @@ function annotationsShowHide() {
 	for (var i=0; i<annos.length; i++) {
 		annos[i].style.visibility = annotationsShown ? "hidden" : "visible";
 	}
-	shown = !shown;
+	annotationsShown = !annotationsShown;
 }
 
 function loadIndex() {
