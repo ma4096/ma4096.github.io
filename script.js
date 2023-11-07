@@ -33,6 +33,7 @@ function loadAnnotations(path) {
 				}
 				//Check if annos should be displayed or not, similar to annotationsShowHide()
 				var annos = model.getElementsByClassName("hotspot");
+				console.log(annos);
 				for (var i=0; i<annos.length; i++) {
 					annos[i].style.visibility = annotationsShown ? "hidden" : "visible";
 				}

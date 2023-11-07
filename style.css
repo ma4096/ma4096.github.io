@@ -11,6 +11,7 @@ sidebar {
 	height: 100%;
 	position: absolute;
 	overflow: auto;
+	transition:300ms linear;
 }
 sidebar > div {
   margin: auto;
@@ -55,6 +56,7 @@ model-viewer {
     bottom: 0%;
     height: 0%;
     width: 100%;
+  transition:300ms linear;
 }
 .annotation-selector > div {
 	float: left;
@@ -73,6 +75,7 @@ model-viewer {
 	border-radius: 0px 3px 3px 0px;
 	border-color: #00c1d4;
 	background-color: #00c1d4;
+  transition:300ms linear;
 }
 #anoButton {
 	position: fixed;
@@ -84,6 +87,7 @@ model-viewer {
 	border-radius: 3px 3px 0px 0px;
 	border-color: #668ea7;
 	background-color: #668ea7;
+	transition:300ms linear;
 }
 .clickable:hover {
 	cursor: pointer;
@@ -118,6 +122,7 @@ model-viewer {
 /*Inside the options for explore3d*/
 .options {
 	height: 50%;
+	transition:300ms linear;
 }
 .anoOptions {
 	width: 20%;
