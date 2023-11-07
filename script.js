@@ -30,12 +30,13 @@ function loadAnnotations(path) {
 			.then((response)=>{
 				return response.json();
 			}).then((annoJson)=>{
+				console.log(annoJson);
 				for (n in annoJson) {
 					model.innerHTML = model.innerHTML + annoJson[n];
 				}
 				//Check if annos should be displayed or not, similar to annotationsShowHide()
 				var annos = model.getElementsByClassName("hotspot");
-				console.log(annos);
+				//console.log(annos);
 				for (var i=0; i<annos.length; i++) {
 					annos[i].style.visibility = aD.checked ? "visible" : "hidden";
 				}
