@@ -1,8 +1,10 @@
 var index;
 var menuPath = "";
 var model;
-var annotationsShown = true;
+//var annotationsShown = true; //replaced by aD
 //var currentIndex;
+
+var aD = document.getElementById("showAnnotations"); //annotations decider, is checkbox
 
 function loadNewModel(path) {
 	modelCollection = document.getElementsByTagName("model-viewer");
@@ -35,7 +37,7 @@ function loadAnnotations(path) {
 				var annos = model.getElementsByClassName("hotspot");
 				console.log(annos);
 				for (var i=0; i<annos.length; i++) {
-					annos[i].style.visibility = annotationsShown ? "hidden" : "visible";
+					annos[i].style.visibility = aD.checked ? "visible" : "hidden";
 				}
 				return annoJson;
 			});
@@ -59,9 +61,9 @@ function getAnnoPath(path) {
 function annotationsShowHide() {
 	var annos = model.getElementsByClassName("hotspot");
 	for (var i=0; i<annos.length; i++) {
-		annos[i].style.visibility = annotationsShown ? "hidden" : "visible";
+		annos[i].style.visibility = aD.checked ? "visible" : "hidden";
 	}
-	annotationsShown = !annotationsShown;
+	//annotationsShown = !annotationsShown;
 }
 
 function loadIndex() {
