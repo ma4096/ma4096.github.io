@@ -32,7 +32,9 @@ function loadAnnotations(path) {
 			}).then((annoJson)=>{
 				console.log(annoJson);
 				for (n in annoJson) {
-					model.innerHTML = model.innerHTML + annoJson[n];
+					model.innerHTML = model.innerHTML + annoJson[n]
+						.replace("Ã¤", "ä").replace("Ã¼", "ü").replace("Ã¶", "ö").replace("Ã", "Ä")
+						.replace("Ã", "Ä").replace("Ã", "Ü").replace("Ã", "ß"); //works so whatever
 				}
 				//Check if annos should be displayed or not, similar to annotationsShowHide()
 				var annos = model.getElementsByClassName("hotspot");
