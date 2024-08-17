@@ -30,7 +30,7 @@ function loadAnnotations(path) {
 			.then((response)=>{
 				return response.json();
 			}).then((annoJson)=>{
-				console.log(annoJson);
+				//console.log(annoJson);
 				for (n in annoJson) {
 					model.innerHTML = model.innerHTML + annoJson[n]
 						.replace("Ã¤", "ä").replace("Ã¼", "ü").replace("Ã¶", "ö").replace("Ã", "Ä")
